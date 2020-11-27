@@ -4,6 +4,7 @@ import net.hypixel.api.util.Banner;
 
 import java.time.ZonedDateTime;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 public class GuildReply extends AbstractReply {
@@ -117,6 +118,7 @@ public class GuildReply extends AbstractReply {
             private UUID uuid;
             private String rank;
             private ZonedDateTime joined;
+            private Map<String, Integer> expHistory;
 
             public UUID getUuid() {
                 return uuid;
@@ -128,6 +130,10 @@ public class GuildReply extends AbstractReply {
 
             public ZonedDateTime getJoined() {
                 return joined;
+            }
+
+            public Map<String, Integer> getExpHistory() {
+                return this.expHistory;
             }
 
             @Override
